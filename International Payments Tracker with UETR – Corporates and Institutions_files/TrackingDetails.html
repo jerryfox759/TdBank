@@ -1,178 +1,157 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>MT103 Financial Transfer</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>YNR Constructions – Transaction Report</title>
   <style>
+    :root {
+      --primary: #2C3E50;
+      --secondary: #1ABC9C;
+      --light: #f8f9fb;
+      --muted: #6c757d;
+      --border: #e0e6ed;
+    }
     body {
-      font-family: Arial, sans-serif;
-      background: #f7f7f7;
-      margin: 20px;
-      color: #333;
+      margin: 0;
+      font-family: "Segoe UI", Roboto, Arial, sans-serif;
+      background: var(--light);
+      color: #2c3e50;
+      line-height: 1.6;
     }
-    .container {
-      background: #fff;
-      padding: 25px;
-      border: 1px solid #ccc;
-      max-width: 900px;
-      margin: auto;
-      box-shadow: 0 0 10px rgba(0,0,0,0.1);
-    }
-    h1, h2 {
+    header {
+      background: var(--primary);
+      color: white;
+      padding: 24px;
       text-align: center;
-      margin-bottom: 20px;
+      border-bottom: 4px solid var(--secondary);
     }
-    .section {
-      margin-bottom: 25px;
-    }
-    .label {
-      font-weight: bold;
-    }
-    pre {
-      background: #f2f2f2;
-      padding: 10px;
-      white-space: pre-wrap;
-      word-wrap: break-word;
-    }
-    .back-home-btn {
-      display: inline-block;
-      padding: 12px 32px;
-      background: linear-gradient(90deg, #0072ce 0%, #005fa3 100%);
-      color: #fff;
-      border: none;
-      border-radius: 6px;
-      text-decoration: none;
-      font-size: 1.08rem;
+    header h1 {
+      margin: 0;
+      font-size: 24px;
       font-weight: 600;
-      box-shadow: 0 2px 12px rgba(0,114,206,0.10);
-      transition: background 0.2s, box-shadow 0.2s;
-      letter-spacing: 0.5px;
-      cursor: pointer;
     }
-    .back-home-btn:hover, .back-home-btn:focus {
-      background: linear-gradient(90deg, #005fa3 0%, #0072ce 100%);
-      box-shadow: 0 4px 16px rgba(0,114,206,0.18);
-      outline: none;
+    header p {
+      margin: 4px 0 0;
+      font-size: 14px;
+      color: #dcdfe3;
+    }
+    main {
+      max-width: 950px;
+      margin: 30px auto;
+      padding: 0 20px;
+    }
+    .card {
+      background: white;
+      border-radius: 10px;
+      box-shadow: 0 4px 16px rgba(0,0,0,0.05);
+      padding: 24px;
+      margin-bottom: 24px;
+    }
+    .card h2 {
+      font-size: 18px;
+      margin: 0 0 16px;
+      border-left: 4px solid var(--secondary);
+      padding-left: 10px;
+      color: var(--primary);
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 0;
+    }
+    th, td {
+      text-align: left;
+      padding: 10px 12px;
+      border-bottom: 1px solid var(--border);
+      font-size: 14px;
+    }
+    th {
+      width: 250px;
+      font-weight: 600;
+      background: #fdfdfd;
+      color: var(--primary);
+    }
+    .amount {
+      font-weight: 700;
+      font-size: 18px;
+      color: var(--secondary);
+    }
+    .footnote {
+      font-size: 12px;
+      color: var(--muted);
+      text-align: center;
+      margin-top: 30px;
     }
   </style>
 </head>
 <body>
-  <div class="container">
-    <h1>MT103 : FIN 103 AUTO FIN INST TRANSFER</h1>
+  <header>
+    <h1>YNR Constructions</h1>
+    <p>Transaction Summary Report</p>
+  </header>
 
-    <div class="section">
-      <p><span class="label">Sender’s Reference Number:</span> ST39610094709</p>
-      <p><span class="label">Transaction Code:</span> 247107959105379061256780</p>
-      <p><span class="label">Transfer Number 32:</span> FINANCIAL COOPERATION-PRIVATE INVESTMENT</p>
-      <p><span class="label">Value Date:</span> SAMEDAY</p>
-      <p><span class="label">Currency:</span> EURO</p>
-      <p><span class="label">Amount:</span> 2,000,000</p>
-      <p><span class="label">42: Sender to Receiver:</span> 2,000,000</p>
-      <p><em>Created 31/07/2025 — <strong>Message State: MT103</strong></em></p>
+  <main>
+    <div class="card">
+      <h2>Transaction Overview</h2>
+      <table>
+        <tr><th>Message Type</th><td>MT103 – FIN 103 AUTO FIN INST TRANSFER</td></tr>
+        <tr><th>Created</th><td>19/09/2025</td></tr>
+        <tr><th>Reference Number</th><td>ST39610094709</td></tr>
+        <tr><th>Transaction Code</th><td>2362478850021436520789651</td></tr>
+        <tr><th>Purpose</th><td>Financial Cooperation – Private Investment</td></tr>
+        <tr><th>Currency</th><td>USD</td></tr>
+        <tr><th>Amount</th><td class="amount">$5,000,000</td></tr>
+      </table>
     </div>
 
-    <div class="section">
-      <h2>52D: Sender Bank Details</h2>
-      <p><span class="label">Sender BIC:</span> DEUSUS33XXX</p>
-      <p><span class="label">Bank Name:</span> Deutsche Bank</p>
-      <p><span class="label">Bank Address:</span> Unter Den Linden 13/15, 10117, Berlin, Germany</p>
-      <p><span class="label">Account Name:</span> International Finance Corps. Inc</p>
-      <p><span class="label">Account Number:</span> 2294671095699178002489</p>
+    <div class="card">
+      <h2>Ordering Bank</h2>
+      <table>
+        <tr><th>SWIFT / BIC</th><td>CHASUS33XXX</td></tr>
+        <tr><th>Bank</th><td>TD BANK</td></tr>
+        <tr><th>Address</th><td>469 7th Ave, New York, NY 10018, United States</td></tr>
+        <tr><th>Account Holder</th><td>INTERNATIONAL BUSINESS MACHINE CORPS. INC</td></tr>
+        <tr><th>Account Number</th><td>2294671095699178002489</td></tr>
+      </table>
     </div>
 
-    <div class="section">
-      <h2>57: Receiver Bank Details</h2>
-      <p><span class="label">Receiver Name:</span> Gitali Construction Private Limited</p>
-      <p><span class="label">Bank Name:</span> HDFC Bank</p>
-      <p><span class="label">Bank Address:</span> Rukmini Gaon Branch, AP Tower, GS Road, Guwahati</p>
-      <p><span class="label">Account Number:</span> 50200096317895</p>
+    <div class="card">
+      <h2>Beneficiary Bank</h2>
+      <table>
+        <tr><th>Beneficiary</th><td>ELAKA NARASIMHA RAO</td></tr>
+        <tr><th>Bank</th><td>YES BANK</td></tr>
+        <tr><th>Branch Address</th><td>Ground Floor, 9-5-30/1/2, Mandi Bazar, Warangal</td></tr>
+        <tr><th>Account Name</th><td>YNR CONSTRUCTIONS AND DEVELOPERS</td></tr>
+        <tr><th>Account Number</th><td>018763300001632</td></tr>
+      </table>
     </div>
 
-    <div class="section">
-      <h2>Message Trailer</h2>
-      <p><span class="label">Track Code:</span> 38501-93758-0</p>
-      <p><span class="label">PKT Signature:</span> Henry Benson</p>
-      <p><span class="label">Status:</span> Confirmed and Received</p>
+    <div class="card">
+      <h2>Validation & Tracking</h2>
+      <table>
+        <tr><th>Track Code</th><td>93652-57412-5</td></tr>
+        <tr><th>Packet Signature</th><td>HENRY BENSON</td></tr>
+        <tr><th>Status</th><td>Confirmed and received</td></tr>
+        <tr><th>Location</th><td>Telangana, India 506002</td></tr>
+      </table>
     </div>
 
-    <div class="section">
-      <h2>Validation & Authentication</h2>
-      <pre>
-DATEWAY RESPONSE VALIDATION SERVICE LOG / APPLICATION GENERATED REPORT
-ACKNOWLEDGMENT & AUTHENTICATION ACK NAG DELIVERY
-
-GITALI CONSTRUCTION PRIVATE LIMITED
-FTA/FTI CONFIRMATION STATEMENT PASS/FALL STATUS
-0050CNT: VALID
-0060 RFF-DTM: VALID
-0070 RFF: VALID
-0080 DTM: VALID
-0090 NAD-CTA-COM: VALID
-0100 NAD: VALID
-0110 CTA: VALID
-0120 COM: VALID
-0130 ECR-FTX-5G4: VALID
-0140: TAX
-0150: PENDING
-0160: SERVER
-0170 REF: TERMINAL 4 MS
-0180 FTX: INR
-      </pre>
+    <div class="card">
+      <h2>Message Metadata</h2>
+      <table>
+        <tr><th>Priority</th><td>3rd business day</td></tr>
+        <tr><th>Received By</th><td>YES BANK</td></tr>
+        <tr><th>MIR</th><td>CH36254784952300178549</td></tr>
+        <tr><th>MOR</th><td>CH1952470032578452149</td></tr>
+        <tr><th>Release Code</th><td>SSD6147542365897452</td></tr>
+        <tr><th>Approval Code</th><td>657410254761973548</td></tr>
+        <tr><th>Date</th><td>19/09/2025</td></tr>
+        <tr><th>Time</th><td>01:56:34</td></tr>
+      </table>
     </div>
 
-    <div class="section">
-      <h2>Delivery Report</h2>
-      <pre>
-MESSAGE TYPE: MT103
-PRIORITY: 5TH BUSINESS DAY
-RECEIVED: HDFC BANK
-MIR: CH20857174902371059001
-MOR: CH3784319088765412900
-RELEASE CODE: SSD5160937341609733
-KEY: 834667189
-DOWNLOAD CODE: MIL14630009638124
-ANSWER: CH4167907774315632
-APPROVAL CODE: 197453784910921628
-INPUT / OUTPUT: ACK NAK BUP AUTH
-TIME: 05:32:25
-DATE: 31/07/2025
-      </pre>
-    </div>
-    <div class="section">
-  <h2>PAYMENT STATUS</h2>
-  <pre>
-CURRENT STATUS : PROCESSED EUROPEAN CENTRAL BANK | EUROSYSTEM
-FOREX : CONVERSION COMPLETED 
-EXPECTED AMOUNT : 199614000.00 INR
-EXPECTED DATE : 18 AUG 2025
-  </pre>
-</div>
-    <!-- Professional Search Again Button (smaller) -->
-    <div style="display: flex; justify-content: flex-end; margin-top: 32px;">
-      <a href="index.html" class="back-home-btn" onclick="localStorage.removeItem('redirectUrl')">Search Again</a>
-    </div>
-  </div>
-  <style>
-    .back-home-btn {
-      display: inline-block;
-      padding: 7px 18px;
-      background: linear-gradient(90deg, #0072ce 0%, #005fa3 100%);
-      color: #fff;
-      border: none;
-      border-radius: 5px;
-      text-decoration: none;
-      font-size: 0.98rem;
-      font-weight: 500;
-      box-shadow: 0 2px 8px rgba(0,114,206,0.10);
-      transition: background 0.2s, box-shadow 0.2s;
-      letter-spacing: 0.3px;
-      cursor: pointer;
-    }
-    .back-home-btn:hover, .back-home-btn:focus {
-      background: linear-gradient(90deg, #005fa3 0%, #0072ce 100%);
-      box-shadow: 0 4px 12px rgba(0,114,206,0.16);
-      outline: none;
-    }
-  </style>
+    
+  </main>
 </body>
 </html>
